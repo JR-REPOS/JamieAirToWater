@@ -40,10 +40,25 @@ comment on PRs).
 
 ### 3. Add the workflow files
 
-Create the two files below at `.github/workflows/deploy.yml` and
-`.github/workflows/preview.yml` (via the GitHub web UI: **Add file > Create
-new file**, or a local git push), then delete `.github/workflows/static.yml`
-(it is replaced by `deploy.yml`).
+The automation that prepared this repository could not push workflow files
+(its GitHub App lacks the `workflows` permission), so they are provided two
+ways - pick either:
+
+**Option A - apply the included patch (fastest).** From a local clone:
+
+```bash
+git fetch origin cline/waecx6b7
+git checkout cline/waecx6b7   # or main, after merging
+git am docs/wire-in-workflows.patch
+git push
+```
+
+The patch creates `.github/workflows/deploy.yml` and
+`.github/workflows/preview.yml`, and deletes `.github/workflows/static.yml`.
+
+**Option B - GitHub web UI.** Create the two files below at
+`.github/workflows/deploy.yml` and `.github/workflows/preview.yml`
+(**Add file > Create new file**), then delete `.github/workflows/static.yml`.
 
 ---
 
