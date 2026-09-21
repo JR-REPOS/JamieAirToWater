@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -10,60 +10,15 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-P7P9D6DC');</script>
     <!-- End Google Tag Manager -->
-    <title>LG Therma</title>
+    <title>LG Thermia</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
+        /* Add this CSS to hide the results box by default */
         .results-box {
-            display: none;
+            display: none; /* Hide results box */
         }
         .results-box.visible {
-            display: block;
-        }
-        #codeText {
-            display: none;
-        }
-        #pdfModal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        #pdfModal iframe {
-            width: 90%;
-            height: 90%;
-            max-width: 100%;
-            max-height: 100%;
-            border: none;
-        }
-        #pdfModal .modal-content {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #closeModal {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: red;
-            color: white;
-            font-size: 1.5rem;
-            width: 3rem;
-            height: 3rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 1001;
+            display: block; /* Show results box when visible class is added */
         }
     </style>
 </head>
@@ -72,69 +27,28 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7P9D6DC"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
+   
     <div id="container" class="max-w-4xl mx-auto p-6">
-        <h1 class="text-4xl text-center mb-4">LG Therma</h1>
-        <div class="space-y-4 mb-4">
-            <a href="../index.html" id="homeButton" class="block w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded transition duration-300 ease-in-out text-center transform hover:scale-105">
-                Home
-            </a>
-
-            <!-- PDF dropdown menu -->
-            <div class="relative">
-                <button id="pdfButton" class="block w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded transition duration-300 ease-in-out text-center transform hover:scale-105">
-                    PDF Files
-                </button>
-                <div id="pdfMenu" class="absolute hidden bg-gray-800 text-gray-200 w-full mt-2 rounded shadow-lg z-10">
-                    <button class="block w-full px-4 py-2 text-center hover:bg-gray-700" data-pdf="../PDF/LG-Therma-V-Service-Manual_MFL68682007_GM_1217.pdf">
-                        Service Manual
-                    </button>
-                </div>
-            </div>
-        </div>
+        <h1 class="text-4xl text-center mb-4">LG Thermia</h1>
+            <div class="space-y-4 mb-4">
+                   <a href="../index.html" id="homeButton" class="block w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded transition duration-300 ease-in-out text-center transform hover:scale-105">
+                       Home
+                   </a>
+    
         <br>
-        <input type="text" id="search" placeholder="Enter error code" class="w-full p-3 mb-4 border border-gray-600 bg-gray-700 text-gray-200 rounded text-center focus:outline-none focus:ring focus:ring-gray-500">
+        <input type="text" id="search" placeholder="Enter error code" class="w-full p-3 mb-4 border border-gray-600 bg-gray-700 text-gray-200 rounded text-center 
+ focus:outline-none focus:ring focus:ring-gray-500">
         <div id="results" class="results-box bg-gray-800 border border-gray-700 rounded-lg p-4 mt-4"></div>
-    </div>
-
-    <!-- PDF Modal -->
-    <div id="pdfModal">
-        <div class="modal-content">
-            <button id="closeModal">&times;</button>
-            <iframe id="pdfFrame" src="" title="PDF viewer"></iframe>
-        </div>
     </div>
 
     <script>
         const searchInput = document.getElementById('search');
         const resultsBox = document.getElementById('results');
-        const pdfButton = document.getElementById('pdfButton');
-        const pdfMenu = document.getElementById('pdfMenu');
-        const pdfModal = document.getElementById('pdfModal');
-        const pdfFrame = document.getElementById('pdfFrame');
-        const closeModal = document.getElementById('closeModal');
 
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.trim().toLowerCase(); // Normalize to lower case
 
-        // Debounce so the JSON is not fetched on every single keystroke
-        function debounce(func, delay) {
-            let timeout;
-            return function(...args) {
-                clearTimeout(timeout);
-                timeout = setTimeout(() => func.apply(this, args), delay);
-            };
-        }
-
-        searchInput.addEventListener('input', debounce(() => {
-            const searchTerm = searchInput.value.trim().toLowerCase();
-
-            // Hide results again when the search box is cleared
-            if (!searchTerm) {
-                resultsBox.classList.remove('visible');
-                resultsBox.innerHTML = '';
-                return;
-            }
-
-            fetch('../JSON/LgThermia.json')
+            fetch('../JSON/LG.json')  // Fetch data from LG.json
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
@@ -143,22 +57,22 @@
                 })
                 .then(data => {
                     const errorCodes = data["Error Codes"] || [];
-                    const troubleshooting = data["Troubleshooting"] || [];
 
-                    // Match on the full code or just its numeric part
-                    const numericTerm = searchTerm.replace(/[^\d]/g, '');
-                    const matches = item => {
-                        const code = (item.errorCode || '').toLowerCase();
-                        const codeMatch = code.includes(searchTerm);
-                        // Only compare numeric parts when the search contains digits
-                        const numericMatch = numericTerm !== '' && code.replace(/[^\d]/g, '').includes(numericTerm);
-                        return codeMatch || numericMatch;
-                    };
-
-                    const combinedResults = [...errorCodes.filter(matches), ...troubleshooting.filter(matches)];
+                    // Filter all error codes across different assemblies
+                    const combinedResults = errorCodes.flatMap(assembly => 
+                        assembly.codes.filter(item => {
+                            const codeMatch = item.errorCode.toLowerCase().includes(searchTerm);
+                            const numericMatch = item.errorCode.replace(/[^\d]/g, '').includes(searchTerm.replace(/[^\d]/g, ''));
+                            return codeMatch || numericMatch;
+                        }).map(item => ({
+                            errorCode: item.errorCode,
+                            errorMeaning: item.errorMeaning,
+                            possibleSolution: item.possibleSolution
+                        }))
+                    );
 
                     if (combinedResults.length > 0) {
-                        const resultsText = combinedResults.map(item =>
+                        const resultsText = combinedResults.map(item => 
                             `<div class="result-container mb-4 p-4 bg-gray-700 rounded-lg">
                                 <div class="error-code font-bold">Error Code: <span class="text-yellow-300">${item.errorCode}</span></div>
                                 <div class="line my-2 border-b border-gray-600"></div>
@@ -166,49 +80,20 @@
                                 <div class="line my-2 border-b border-gray-600"></div>
                                 <div class="Measure">Solution: ${item.possibleSolution || 'N/A'}</div>
                             </div>`
-                        ).join('');
-                        resultsBox.innerHTML = resultsText;
-                        resultsBox.classList.add('visible');
+                        ).join(''); // No need for extra <br> as each result has its own container
+                        resultsBox.innerHTML = resultsText; // Use innerHTML to render formatted text
+                        resultsBox.classList.add('visible'); // Show results box
                     } else {
                         resultsBox.innerHTML = 'No results found.';
-                        resultsBox.classList.add('visible');
+                        resultsBox.classList.add('visible'); // Show results box even if no results
                     }
                 })
                 .catch(error => {
                     console.error('Error fetching or parsing JSON:', error);
                     resultsBox.innerHTML = `Error loading data: ${error.message}`;
-                    resultsBox.classList.add('visible');
+                    resultsBox.classList.add('visible'); // Show error message
                 });
-        }, 300));
-
-        // Show/hide the PDF dropdown menu
-        pdfButton.addEventListener('click', () => {
-            pdfMenu.classList.toggle('hidden');
         });
-
-        // Open the selected PDF in the modal
-        document.querySelectorAll('[data-pdf]').forEach(button => {
-            button.addEventListener('click', (event) => {
-                pdfFrame.src = event.target.getAttribute('data-pdf');
-                pdfModal.style.display = 'flex';
-                pdfMenu.classList.add('hidden');
-            });
-        });
-
-        // Close the modal via the X button
-        closeModal.addEventListener('click', () => {
-            pdfModal.style.display = 'none';
-            pdfFrame.src = '';
-        });
-
-        // Close the modal when clicking outside of it
-        pdfModal.addEventListener('click', (event) => {
-            if (event.target === pdfModal) {
-                pdfModal.style.display = 'none';
-                pdfFrame.src = '';
-            }
-        });
-
     </script>
 </body>
 </html>
