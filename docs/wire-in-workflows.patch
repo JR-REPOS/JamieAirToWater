@@ -1,6 +1,6 @@
-From 216c1601468c9d80d48c229fe2bc393544d21859 Mon Sep 17 00:00:00 2001
+From ab96907a90ec6233da57614fca374a22ae909952 Mon Sep 17 00:00:00 2001
 From: Cline <cline@users.noreply.github.com>
-Date: Mon, 21 Sep 2026 12:13:36 +0000
+Date: Mon, 21 Sep 2026 12:15:19 +0000
 Subject: [PATCH] Wire in GitHub Pages PR preview workflows
 
 - .github/workflows/deploy.yml: publishes main to the gh-pages branch root
@@ -11,16 +11,14 @@ Subject: [PATCH] Wire in GitHub Pages PR preview workflows
   sticky comment with the preview URL, refreshes on new commits, and
   removes the preview when the PR closes
 - Removes static.yml (replaced by deploy.yml)
-- README and docs/pr-previews.md updated: workflows are now wired in;
-  only the two one-time repo settings remain (Pages source = Deploy from
-  branch gh-pages; workflow permissions = read/write)
+- README and docs updated to reflect the workflows are wired in
 ---
  .github/workflows/deploy.yml  | 41 +++++++++++++++++++++++++++++++++
  .github/workflows/preview.yml | 43 +++++++++++++++++++++++++++++++++++
  .github/workflows/static.yml  | 43 -----------------------------------
  README.md                     | 16 ++++++++-----
- docs/pr-previews.md           | 19 ++++++++--------
- 5 files changed, 103 insertions(+), 59 deletions(-)
+ docs/pr-previews.md           |  8 +++----
+ 5 files changed, 97 insertions(+), 54 deletions(-)
  create mode 100644 .github/workflows/deploy.yml
  create mode 100644 .github/workflows/preview.yml
  delete mode 100644 .github/workflows/static.yml
@@ -196,10 +194,10 @@ index 7ba8a79..ae914d2 100644
 +branch: gh-pages", and workflow permissions = read/write) - see
 +[docs/pr-previews.md](docs/pr-previews.md).
 diff --git a/docs/pr-previews.md b/docs/pr-previews.md
-index 352ebd3..b66acdd 100644
+index f761ce4..faca25c 100644
 --- a/docs/pr-previews.md
 +++ b/docs/pr-previews.md
-@@ -11,12 +11,11 @@ A sticky comment with the link is posted on the PR, the preview is refreshed on
+@@ -11,12 +11,10 @@ A sticky comment with the link is posted on the PR, the preview is refreshed on
  every new commit, and it is removed automatically when the PR is closed.
  (Previews for PRs from forks are not supported by the underlying action.)
  
@@ -210,30 +208,11 @@ index 352ebd3..b66acdd 100644
 -two workflow files below must live in `.github/workflows/`. Applying them
 -needs two one-time repository settings changes (steps 1-2 below) and adding
 -the files (step 3).
-+The workflow files described here are wired into `.github/workflows/`.
-+GitHub Pages previews additionally require the site to be served from a
-+branch, so two one-time repository settings changes remain (steps 1-2 below).
++The workflow files are now wired into `.github/workflows/`. Two one-time
++repository settings changes remain (steps 1-2 below) before previews go live.
  
  > Note: `actions/deploy-pages` has a native `preview` input, but it is in
  > closed alpha and not publicly available, so this uses the battle-tested
-@@ -38,12 +37,12 @@ so the live site keeps working through the switch.
- **Read and write permissions** (needed to push previews to `gh-pages` and
- comment on PRs).
- 
--### 3. Add the workflow files
-+### 3. Merge the workflows
- 
--Create the two files below at `.github/workflows/deploy.yml` and
--`.github/workflows/preview.yml` (via the GitHub web UI: **Add file > Create
--new file**, or a local git push), then delete `.github/workflows/static.yml`
--(it is replaced by `deploy.yml`).
-+Merge the branch containing `.github/workflows/deploy.yml` and
-+`.github/workflows/preview.yml` into `main` (they replace the old
-+`static.yml`, which is removed in the same change). The full contents of
-+both files are included below for reference.
- 
- ---
- 
 -- 
 2.39.5
 
