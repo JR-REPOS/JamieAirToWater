@@ -19,3 +19,8 @@ installer codes, manuals, and fault-finding videos.
 
 Deployed to GitHub Pages via `.github/workflows/static.yml` on every push to
 `main` (or manually from the Actions tab).
+
+PR preview deployments (each pull request published to its own Pages URL)
+are prepared but not yet enabled - see [docs/pr-previews.md](docs/pr-previews.md)
+for the ready-to-use workflow files and the two one-time repository settings
+they require.
