@@ -1,0 +1,40 @@
+# Deploys a preview of every pull request to GitHub Pages at:
+#   https://jayreddin.github.io/JamieAirToWater/pr-preview/pr-<number>/
+name: Deploy PR preview
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+permissions:
+  contents: write        # push the preview to the gh-pages branch
+  pull-requests: write   # post the preview-link comment on the PR
+
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        if: github.event.action != 'closed'
+        uses: actions/checkout@v4
+
+      - name: Assemble site
+        if: github.event.action != 'closed'
+        run: |
+          mkdir _site
+          rsync -a --exclude '.git' --exclude '.github' --exclude '_site' ./ _site/
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./_site
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          # Don't use the third-party QR code service in the PR comment
+          qr-code: false
