@@ -69,7 +69,7 @@
 
                 /* Styles matching victorumjoule.html */
                 body {
-                    background-color: #111827;> /* Dark background */
+                    background-color: #111827; /* Dark background */
                     /* White text */
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 }
@@ -129,7 +129,7 @@
                     justify-content: space-between;
                     align-items: center;
                     width: 100%;
-                }>
+                }
                 #chatbot-left, #chatbot-right {
                     width: 50%;
                 }
@@ -146,7 +146,7 @@
                 <div id="container" class="max-w-4xl mx-auto p-6">
                     <h1 class="text-4xl text-center mb-4">Ai Assistant</h1>
 
-            <div class="container" class="max-w-4xl mx-auto">
+            <div class="container max-w-4xl mx-auto">
               <div class="space-y-4 mb-4">
               <a href="../index.html" id="homeButton" class="block w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded transition duration-300 ease-in-out text-center transform hover:scale-105"> Home </a>
             <div class="space-y-4 mt-4">
@@ -162,11 +162,11 @@
                 <option value="De Dietrich">De Dietrich</option>
                 <option value="Kodiak Joule">Kodiak Joule</option>
                 <option value="Victorum Joule">Victorum Joule</option>
-                <option value="Grant Areona">Grant Areona</option>
-                <option value="LG Thermia">LG Thermia</option>
+                <option value="Grant Aerona">Grant Aerona</option>
+                <option value="LG Therma">LG Therma</option>
                 <option value="Hitachi Yutaki">Hitachi Yutaki</option>
                 <option value="Panasonic Aquarea">Panasonic Aquarea</option>
-                <option value="Viessman Vitocal">Viessman Vitocal</option>
+                <option value="Viessmann Vitocal">Viessmann Vitocal</option>
               </select>
             </div>
 
@@ -180,7 +180,7 @@
                   
                   <div id="chatbot-container">
                     <div id="chatbot-left">
-                      <script src="https://www.chatbees.ai/embed.js" aid="PV8Z750N" colname="Jamie" logoUrl="https://i.imgur.com/R04NL4l.jpeg" brandName="Jamie" greetingMessage="Whats the Error Code and Brand?" thinkingHint="Watching Paint Dry.." messagePlaceholder="Type your message here"> class="text-sm/6"</script>
+                      <script src="https://www.chatbees.ai/embed.js" aid="PV8Z750N" colname="Jamie" logoUrl="https://i.imgur.com/R04NL4l.jpeg" brandName="Jamie" greetingMessage="Whats the Error Code and Brand?" thinkingHint="Watching Paint Dry.." messagePlaceholder="Type your message here"></script>
                     </div>
                     <div id="chatbot-right">
                       <script>
@@ -217,11 +217,11 @@
                               "De Dietrich": "DeDietrich.json",
                               "Kodiak Joule": "KodiakJoule.json",
                               "Victorum Joule": "VictorumJoule.json",
-                              "Grant Areona": "GrantAreona.json",
-                              "LG Thermia": "LgThermia.json",
+                              "Grant Aerona": "GrantAreona.json",
+                              "LG Therma": "LgThermia.json",
                               "Hitachi Yutaki": "HitachiYutaki.json",
                               "Panasonic Aquarea": "PanasonicAquarea.json",
-                              "Viessman Vitocal": "ViessmanVitocal.json",
+                              "Viessmann Vitocal": "ViessmanVitocal.json",
                           };
 
                           const fileName = fileNameMapping[brand];
@@ -237,16 +237,17 @@
                                   .then(data => {
                                       const errorCodes = data["Error Codes"] || [];
                                       const troubleshooting = data["Troubleshooting"] || [];
+                                      const numericTerm = error.replace(/[^\d]/g, '');
 
                                       const filteredErrorCodes = errorCodes.filter(item => {
                                           const codeMatch = item.errorCode.toLowerCase().includes(error.toLowerCase());
-                                          const numericMatch = item.errorCode.replace(/[^\d]/g, '').includes(error.replace(/[^\d]/g, ''));
+                                          const numericMatch = numericTerm !== '' && item.errorCode.replace(/[^\d]/g, '').includes(numericTerm);
                                           return codeMatch || numericMatch;
                                       });
 
                                       const filteredTroubleshooting = troubleshooting.filter(item => {
                                           const codeMatch = item.errorCode.toLowerCase().includes(error.toLowerCase());
-                                          const numericMatch = item.errorCode.replace(/[^\d]/g, '').includes(error.replace(/[^\d]/g, ''));
+                                          const numericMatch = numericTerm !== '' && item.errorCode.replace(/[^\d]/g, '').includes(numericTerm);
                                           return codeMatch || numericMatch;
                                       });
 
