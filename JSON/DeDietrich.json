@@ -1,0 +1,299 @@
+{
+  "Error Codes": [
+    {
+      "errorCode": "A02.06",
+      "errorMeaning": "Water pressure",
+      "possibleSolution": "Warning: hydraulic pressure too low: check the hydraulic pressure in the heating circuit. Recommended hydraulic pressure between 1.5 bar and 2 bar."
+    },
+    {
+      "errorCode": "A02.18",
+      "errorMeaning": "OBD error",
+      "possibleSolution": "Internal error / object dictionary: Reset CN1 and CN2: See Configure CN1 and CN2."
+    },
+    {
+      "errorCode": "A02.22",
+      "errorMeaning": "Low Flow",
+      "possibleSolution": "Warning: The water flow is too low. Check the opening of thermostatic valves and taps. Check the operation of the circulation pump. Too much air: completely purge the interior module and the installation for optimum operation. Clean the filters."
+    },
+    {
+      "errorCode": "A02.55",
+      "errorMeaning": "Invalid series number",
+      "possibleSolution": "Missing or invalid serial number: Contact Technical Support."
+    },
+    {
+      "errorCode": "E00.00",
+      "errorMeaning": "T Depot open",
+      "possibleSolution": "Flow temperature sensor missing or temperature below range is measured. Check probe wiring. Check if the probe has been mounted correctly. Check the ohmic value of the probe. See: Ohmic values of probes. Replace the probe if necessary."
+    },
+    {
+      "errorCode": "E00.01",
+      "errorMeaning": "Flow temp sensor is shorted or temperature above range is measured",
+      "possibleSolution": "Check probe wiring. Check if the probe has been mounted correctly. Check the ohmic value of the probe. See: Ohmic values of probes. Replace the probe if necessary."
+    },
+    {
+      "errorCode": "E02.13",
+      "errorMeaning": "Blocking entry",
+      "possibleSolution": "Input blocking of the control unit from an external device. BL input open. Check the wiring. Check the component connected to the BL contact. Check the connected component."
+    },
+    {
+      "errorCode": "E02.24",
+      "errorMeaning": "Water flow error lock",
+      "possibleSolution": "Lockout: water flow is insufficient or no. Check the flow settings - see: Setting the minimum flow rate. Insufficient flow: check the opening of valves and thermostatic taps. Circulation pump: Check how it works. Check the wiring. Check pump power. If the pump does not work, replace it. Too much air: Check that the automatic bleeders are open (also check on the hydroblock). Purge the interior module completely. Purge the installation. Bad wiring: Check the electrical connections. Flow meter: Check the electrical connections and the direction of the flow meter (arrow to the right). Replace the flow meter if necessary. The circuit is clogged: Clean the filters. Clean and rinse the installation."
+    },
+    {
+      "errorCode": "H00.16",
+      "errorMeaning": "T ECS open",
+      "possibleSolution": "The hot water tank temperature sensor is missing or the temperature is below the measured range. Check the wiring between the central unit board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H00.17",
+      "errorMeaning": "T ECS closed",
+      "possibleSolution": "The hot water tank temperature sensor is short-circuited or the measured temperature is above the range. Check the wiring between the central unit board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H00.32",
+      "errorMeaning": "TExt open",
+      "possibleSolution": "The outdoor temperature sensor is missing or the temperature is below the measured range. Check the wiring between the central unit board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary. The outdoor sensor must always be connected to the EHC-... board. If you have connected your outdoor sensor to the SCB-04 board by mistake: reset the factory values of the CN1 and CN2 parameters indicated on the nameplate. See Configure CN1 and CN2."
+    },
+    {
+      "errorCode": "H00.33",
+      "errorMeaning": "TExt closed",
+      "possibleSolution": "The outdoor temperature sensor is short-circuited or the measured temperature is above the range. Check the wiring between the central unit board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H00.34",
+      "errorMeaning": "TExt missing",
+      "possibleSolution": "The outdoor temperature sensor is expected but not detected. Check the wiring between the central unit board EHC-... and the sensor. Check that the outdoor sensor is connected to the E HC-... board. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary. Reset the factory values of the CN1 and CN2 parameters. See Configure CN1 and CN2. Important: This solution also resets all other parameters. Perform an automatic detection of all options and accessories."
+    },
+    {
+      "errorCode": "H00.47",
+      "errorMeaning": "Departure PAC sensor missing or T<range",
+      "possibleSolution": "The heat pump departure sensor is missing or the temperature is below the measured range. Check the wiring between the central unit board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H00.48",
+      "errorMeaning": "TDépt PAC closed",
+      "possibleSolution": "The heat pump departure sensor is short-circuited or the measured temperature is above the range. Check the wiring between the central unit board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H00.49",
+      "errorMeaning": "TDépt PAC missing",
+      "possibleSolution": "The heat pump departure sensor is expected but not detected. Check the wiring between the central unit board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H00.51",
+      "errorMeaning": "TReturn PAC open",
+      "possibleSolution": "The heat pump return sensor is missing or the temperature is below the measured range. Check the wiring between the central unit board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H00.52",
+      "errorMeaning": "TReturn PAC closed",
+      "possibleSolution": "The heat pump return sensor is short-circuited or the measured temperature is above the range. Check the wiring between the central unit board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H00.57",
+      "errorMeaning": "T ECS high open",
+      "possibleSolution": "The high temperature sensor of the hot water tank is missing or the temperature is below the measured range. Check the wiring between the central unit board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H00.58",
+      "errorMeaning": "TECS high closed",
+      "possibleSolution": "The high temperature sensor of the hot water tank is short-circuited or the measured temperature is above the range. Check the wiring between the central unit board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H02.02",
+      "errorMeaning": "Waiting for configuration number",
+      "possibleSolution": "Waiting for the configuration number to be entered - Waiting for the configuration parameters to be entered. Configure CN1 / CN2 according to the power of the installed outdoor unit (CNF menu). See Configure CN1 and CN2. Central unit board changed: heat pump not configured."
+    },
+    {
+      "errorCode": "H02.03",
+      "errorMeaning": "Configuration error",
+      "possibleSolution": "Configuration error: The entered configuration parameters are incorrect. Configure CN1 / CN2 according to the power of the installed outdoor unit (CNF menu). See Configure CN1 and CN2."
+    },
+    {
+      "errorCode": "H02.04",
+      "errorMeaning": "Parameter error",
+      "possibleSolution": "Parameter error: Return to factory settings. See Configure CN1 and CN2. If the error persists: replace the central unit board."
+    },
+    {
+      "errorCode": "H02.05",
+      "errorMeaning": "CSU CU incompatibles",
+      "possibleSolution": "The CSU is not compatible with the CU. Software change (software number or version parameter inconsistent with memory)."
+    },
+    {
+      "errorCode": "H02.07",
+      "errorMeaning": "Water pressure error",
+      "possibleSolution": "Active water pressure error. Check the hydraulic pressure in the heating circuit. Check the wiring between the central unit board and the pressure sensor. Check the connection of the pressure sensor."
+    },
+    {
+      "errorCode": "H02.09",
+      "errorMeaning": "Partial blocking",
+      "possibleSolution": "Partial blocking of the device recognized. BL... input of the EHC-06 board (X12) open. Check the contact on the BL input. Check the wiring. Check the AP001 and AP100 parameters."
+    },
+    {
+      "errorCode": "H02.10",
+      "errorMeaning": "Complete blocking",
+      "possibleSolution": "Complete blocking of the device recognized. BL... input of the EHC-06 board (X12) open. Check the contact on the BL input. Check the wiring. Check the AP001 and AP100 parameters."
+    },
+    {
+      "errorCode": "H02.23",
+      "errorMeaning": "Water flow error",
+      "possibleSolution": "The water flow is below the authorized limit: Flow problem. Insufficient flow: open a radiator valve. The circuit is clogged: Check that the filters are not clogged and clean them. Clean and rinse the installation. No circulation: Check the opening of valves and thermostatic taps. Check the operation of the circulation pump. Check the wiring. Check the power supply to the pump: if the pump does not work, replace it. Too much air: Purge the interior module and the installation completely for optimal operation. Bad wiring: Check the electrical connections. Flow meter: Check the electrical connections and the direction of the flow meter (arrow to the right). Replace the flow meter if necessary."
+    },
+    {
+      "errorCode": "H02.25",
+      "errorMeaning": "ACI error",
+      "possibleSolution": "Titan Active System short-circuited or open circuit. Check the connection cable. Check that the anode is not short-circuited or broken."
+    },
+    {
+      "errorCode": "H02.36",
+      "errorMeaning": "Functional device lost",
+      "possibleSolution": "Functional device disconnected: No communication between the central unit board and the additional circuit board. Check the power cable connection between the electronic boards. Check the BUS cable connection between the electronic boards EHC- and SCB-04 (X8). Perform an automatic detection: See Automatic detection."
+    },
+    {
+      "errorCode": "H02.37",
+      "errorMeaning": "Non-critical device lost",
+      "possibleSolution": "Non-critical device disconnected: No communication between the central unit board and the additional circuit board. Check the power cable connection between the electronic boards. Check the BUS cable connection between the electronic boards EHC- and SCB-04 (X8). Perform an automatic detection: See Automatic detection."
+    },
+    {
+      "errorCode": "H02.53",
+      "errorMeaning": "OTH",
+      "possibleSolution": "Problem on the Opentherm/bus RU input. Check the connection of the Opentherm module or the Smart TC."
+    },
+    {
+      "errorCode": "H02.60",
+      "errorMeaning": "Unsupported function",
+      "possibleSolution": "The zone does not support the selected function."
+    },
+    {
+      "errorCode": "H06.01",
+      "errorMeaning": "PAC fault",
+      "possibleSolution": "Faulty power supply to the outdoor unit: Check the earthing. Check the electrical power supply to the outdoor unit. Check the wiring between the central unit board EHC-... and the outdoor unit interface board. Check the connection of the BUS communication cable between the central unit board EHC-... and the outdoor unit interface board."
+    },
+    {
+      "errorCode": "H06.06",
+      "errorMeaning": "High pressure",
+      "possibleSolution": "A high pressure fault has stopped the compressor. Check the hydraulic pressure in the heating circuit. Check the wiring between the central unit board and the pressure sensor. Check the connection of the pressure sensor."
+    },
+    {
+      "errorCode": "H06.07",
+      "errorMeaning": "Low pressure",
+      "possibleSolution": "A low pressure fault has stopped the compressor. Check the hydraulic pressure in the heating circuit. Check the wiring between the central unit board and the pressure sensor. Check the connection of the pressure sensor."
+    },
+    {
+      "errorCode": "H06.21",
+      "errorMeaning": "TReturn PAC error",
+      "possibleSolution": "Error on the heat pump return temperature sensor. Check the wiring between the FTC2BR electronic board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H06.22",
+      "errorMeaning": "Heating error",
+      "possibleSolution": "Heating function error."
+    },
+    {
+      "errorCode": "H06.23",
+      "errorMeaning": "Refrigerant pressure error",
+      "possibleSolution": "Refrigerant pressure sensor error. Check the wiring between the FTC2BR electronic board and the sensor. Check if the sensor has been mounted correctly. Check the sensor. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H06.24",
+      "errorMeaning": "High refrigerant pressure",
+      "possibleSolution": "High refrigerant pressure protection activated."
+    },
+    {
+      "errorCode": "H06.25",
+      "errorMeaning": "TDépt PAC error",
+      "possibleSolution": "Error on the heat pump departure temperature sensor. Check the wiring between the FTC2BR electronic board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H06.26",
+      "errorMeaning": "T liquid PAC error",
+      "possibleSolution": "Error on the heat pump liquid temperature sensor. Check the wiring between the FTC2BR electronic board and the sensor. Check if the sensor has been mounted correctly. Check the ohmic value of the sensor. See: Ohmic values of sensors. Replace the sensor if necessary."
+    },
+    {
+      "errorCode": "H06.27",
+      "errorMeaning": "Antifreeze protection",
+      "possibleSolution": "Antifreeze protection activated."
+    },
+{
+  "errorCode": "H06.28",
+  "errorMeaning": "Communication error between the indoor module and the outdoor unit",
+  "possibleSolution": "1. Turn off the power to the indoor module and the outdoor unit. 2. Wait 3 minutes for the external unit capacitors to discharge. 3. Power on the indoor module then the outdoor unit."
+},
+{
+  "errorCode": "H06.29",
+  "errorMeaning": "Interface incompatibility",
+  "possibleSolution": "Incompatibility between the outdoor group and the interface board."
+},
+{
+  "errorCode": "H06.30",
+  "errorMeaning": "External module temperature",
+  "possibleSolution": "Outdoor unit temperature anomaly."
+},
+{
+  "errorCode": "H06.31",
+  "errorMeaning": "",
+  "possibleSolution": ""
+},
+{
+  "errorCode": "H06.32",
+  "errorMeaning": "External module temperature sensor error",
+  "possibleSolution": "Check the wiring between the main electronic board and the probes. Check if the probes have been mounted correctly. Check the ohmic value of the probes. See: Ohmic values of sensors. Replace the probes if necessary."
+},
+{
+  "errorCode": "H06.33",
+  "errorMeaning": "External module heat sink temperature anomaly",
+  "possibleSolution": "Thermal sink = radiator."
+},
+{
+  "errorCode": "H06.34",
+  "errorMeaning": "External module power fault",
+  "possibleSolution": "External module power fault."
+},
+{
+  "errorCode": "H06.35",
+  "errorMeaning": "External module overheating anomaly",
+  "possibleSolution": "External module overheating protection activated."
+},
+{
+  "errorCode": "H06.36",
+  "errorMeaning": "External module fan motor malfunction",
+  "possibleSolution": "External module fan motor malfunction."
+},
+{
+  "errorCode": "H06.37",
+  "errorMeaning": "External module overheating protection activated",
+  "possibleSolution": "External module overheating protection activated."
+},
+{
+  "errorCode": "H06.38",
+  "errorMeaning": "External module pressure anomaly",
+  "possibleSolution": "External module pressure anomaly."
+},
+{
+  "errorCode": "H06.39",
+  "errorMeaning": "External module compressor overcurrent",
+  "possibleSolution": "External module compressor overcurrent."
+},
+{
+  "errorCode": "H06.40",
+  "errorMeaning": "External module current sensor error",
+  "possibleSolution": "Check the wiring between the main electronic board and the sensor. Check if the sensor has been installed correctly. Check the ohmic value of the sensor. Replace the sensor if necessary."
+},
+{
+  "errorCode": "H06.41",
+  "errorMeaning": "External module water inlet temperature anomaly",
+  "possibleSolution": "External module water inlet temperature anomaly."
+},
+{
+  "errorCode": "H06.42",
+  "errorMeaning": "External module refrigerant anomaly",
+  "possibleSolution": "External module refrigerant anomaly."
+},
+{
+  "errorCode": "H06.43",
+  "errorMeaning": "DIP switch error",
+  "possibleSolution": "Interface board DIP switch has configuration error. Interface board = FTC2BR electronic board."
+}
+  ]
+}

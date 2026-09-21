@@ -1,0 +1,229 @@
+{
+  "Error Codes": [
+    {
+      "errorCode": "01",
+      "errorMeaning": "Problem in Remote Room Air sensor",
+      "possibleSolution": "Check the remote air temperature sensor of MainPCB (indoor) for open or short conditions."
+    },
+    {
+      "errorCode": "02",
+      "errorMeaning": "Problem in Refrigerant (Inlet side) sensor",
+      "possibleSolution": "Check the refrigerant inlet pipe temperature sensor of the indoor unit for open or short conditions."
+    },
+    {
+      "errorCode": "03",
+      "errorMeaning": "Communication error between indoor unit and wired remote controller",
+      "possibleSolution": "Ensure communication between the wired remote controller and indoor unit is functioning."
+    },
+    {
+      "errorCode": "05",
+      "errorMeaning": "Communication error between Main PCB (Indoor) and Main PCB (Outdoor Cycle)",
+      "possibleSolution": "Check for communication issues between the Main PCB (Indoor) and the Main PCB (Outdoor cycle)."
+    },
+    {
+      "errorCode": "06",
+      "errorMeaning": "Problem in Refrigerant pipe sensor (Outlet side)",
+      "possibleSolution": "Inspect the refrigerant outlet pipe temperature sensor of the indoor unit for open or short conditions."
+    },
+    {
+      "errorCode": "08",
+      "errorMeaning": "Problem in Water Tank sensor",
+      "possibleSolution": "Check the domestic hot water tank temperature sensor of the indoor unit for open or short conditions."
+    },
+    {
+      "errorCode": "09",
+      "errorMeaning": "PCB Program (EEPROM) Fault",
+      "possibleSolution": "Ensure the optional EEPROM is securely inserted into the Main PCB (Indoor)."
+    },
+    {
+      "errorCode": "13",
+      "errorMeaning": "Problem in Solar-thermal sensor",
+      "possibleSolution": "Check the solar pipe temperature sensor of the indoor unit for open or short conditions."
+    },
+    {
+      "errorCode": "14",
+      "errorMeaning": "Problem in Flow rate",
+      "possibleSolution": "Check for low flow detection during pump operation."
+    },
+    {
+      "errorCode": "15",
+      "errorMeaning": "Overheating of water pipe",
+      "possibleSolution": "Inspect the water pipe temperature to ensure it does not exceed safe limits."
+    },
+    {
+      "errorCode": "16",
+      "errorMeaning": "Problems in sensors",
+      "possibleSolution": "Error code 17, 18, or 19 has occurred simultaneously; check all related sensors."
+    },
+    {
+      "errorCode": "17",
+      "errorMeaning": "Problem in Water-inlet sensor",
+      "possibleSolution": "Check the water inlet pipe temperature sensor of the indoor unit for open or short conditions."
+    },
+    {
+      "errorCode": "18",
+      "errorMeaning": "Problem in Water-outlet sensor",
+      "possibleSolution": "Inspect the water outlet pipe temperature sensor of the indoor unit for open or short conditions."
+    },
+    {
+      "errorCode": "19",
+      "errorMeaning": "Problem in Elec/Heater Water-outlet sensor",
+      "possibleSolution": "Check the electric backup heater outlet temperature sensor of the indoor unit for open or short conditions."
+    },
+    {
+      "errorCode": "20",
+      "errorMeaning": "Electric heater overheated",
+      "possibleSolution": "Replace the blown fuse of the electric heater due to overheating."
+    },
+    {
+      "errorCode": "21",
+      "errorMeaning": "Inverter compressor IPM defect",
+      "possibleSolution": "Replace the inverter compressor IPM to prevent power module damage."
+    },
+    {
+      "errorCode": "22",
+      "errorMeaning": "CT Current Error",
+      "possibleSolution": "Check for overcurrent flowing to the outdoor unit."
+    },
+    {
+      "errorCode": "23",
+      "errorMeaning": "DC Link Overvoltage / Undervoltage",
+      "possibleSolution": "Ensure proper DC Link voltage levels during compressor operation."
+    },
+    {
+      "errorCode": "24",
+      "errorMeaning": "High Pressure Error",
+      "possibleSolution": "Inspect discharge pressure of the outdoor unit compressor."
+    },
+    {
+      "errorCode": "26",
+      "errorMeaning": "No Position Error",
+      "possibleSolution": "Check initial startup procedures of the compressor."
+    },
+    {
+      "errorCode": "27",
+      "errorMeaning": "PFC overcurrent",
+      "possibleSolution": "Inspect PFC module for overcurrent issues."
+    },
+    {
+      "errorCode": "29",
+      "errorMeaning": "Comp Over Current",
+      "possibleSolution": "Check input current limits for the inverter compressor."
+    },
+    {
+      "errorCode": "32",
+      "errorMeaning": "D-Pipe Temp. High",
+      "possibleSolution": "Check temperature of the discharge pipe."
+    },
+    {
+      "errorCode": "34",
+      "errorMeaning": "High Pressure Error",
+      "possibleSolution": "Inspect condensing pressure levels."
+    },
+    {
+      "errorCode": "35",
+      "errorMeaning": "Low Pressure Error",
+      "possibleSolution": "Check evaporating pressure levels."
+    },
+    {
+      "errorCode": "40",
+      "errorMeaning": "Inv Comp CT Sensor Error",
+      "possibleSolution": "Check CT sensor error in the inverter driver."
+    },
+    {
+      "errorCode": "41",
+      "errorMeaning": "Inv. D-Pipe Temp sensor Error (Open/Short)",
+      "possibleSolution": "Inspect discharge pipe temperature sensor for open or short conditions."
+    },
+    {
+      "errorCode": "43",
+      "errorMeaning": "High Pressure Sensor (Open/Short)",
+      "possibleSolution": "Check high pressure sensor error."
+    },
+    {
+      "errorCode": "44",
+      "errorMeaning": "Outdoor air Temperature sensor Error (Open/Short)",
+      "possibleSolution": "Inspect outdoor air temperature sensor for open or short conditions."
+    },
+    {
+      "errorCode": "45",
+      "errorMeaning": "Condenser Middle Pipe Temperature Error (Open/Short)",
+      "possibleSolution": "Check condenser middle pipe temperature sensor."
+    },
+    {
+      "errorCode": "46",
+      "errorMeaning": "Compressor Suction Pipe Temperature Error (Open/Short)",
+      "possibleSolution": "Inspect suction pipe temperature sensor for open or short conditions."
+    },
+    {
+      "errorCode": "48",
+      "errorMeaning": "Condenser Out Pipe Temperature Error (Open/Short)",
+      "possibleSolution": "Check thermistor of the condenser out pipe."
+    },
+    {
+      "errorCode": "52",
+      "errorMeaning": "Inv PCB (Outdoor) - Main PCB (Outdoor Cycle) Communication Error",
+      "possibleSolution": "Ensure communication between Inv PCB (Outdoor) and Main PCB (Outdoor Cycle)."
+    },
+    {
+      "errorCode": "53",
+      "errorMeaning": "Main PCB (Indoor) - Main PCB (Outdoor) Communication Error",
+      "possibleSolution": "Check signal reception from the indoor unit."
+    },
+    {
+      "errorCode": "54",
+      "errorMeaning": "Open and Reverse Phase Error",
+      "possibleSolution": "Inspect wiring for reverse phase issues."
+    },
+    {
+      "errorCode": "57",
+      "errorMeaning": "Main PCB (Indoor) → Inv PCB (Outdoor) Communication Error",
+      "possibleSolution": "Check communication defects between main PCB and Inv PCB."
+    },
+    {
+      "errorCode": "60",
+      "errorMeaning": "Outdoor EEPROM error",
+      "possibleSolution": "Check for loose or burnt-out EEPROM."
+    },
+    {
+      "errorCode": "61",
+      "errorMeaning": "High Pressure Error",
+      "possibleSolution": "Inspect condensation pressure levels."
+    },
+    {
+      "errorCode": "62",
+      "errorMeaning": "Heatsink Error (High)",
+      "possibleSolution": "Check temperature of heatsink or element."
+    },
+    {
+      "errorCode": "65",
+      "errorMeaning": "Problem in Heatsink Temperature sensor",
+      "possibleSolution": "Inspect heatsink temperature sensor for proper sensing."
+    },
+    {
+      "errorCode": "67",
+      "errorMeaning": "Fan Lock Error",
+      "possibleSolution": "Check for outdoor BLDC fan lock."
+    },
+    {
+      "errorCode": "114",
+      "errorMeaning": "Injection In TH Error (Open/Short)",
+      "possibleSolution": "Check vapor injection inlet pipe temperature sensor."
+    },
+    {
+      "errorCode": "115",
+      "errorMeaning": "Injection Out TH Error (Open/Short)",
+      "possibleSolution": "Inspect vapor injection outlet pipe temperature sensor."
+    },
+    {
+      "errorCode": "231",
+      "errorMeaning": "Problem in Water Pressure Sensor",
+      "possibleSolution": "Inspect water pressure sensor of the indoor unit."
+    },
+    {
+      "errorCode": "232",
+      "errorMeaning": "Problem in Flow Sensor",
+      "possibleSolution": "Inspect flow sensor of the indoor unit."
+    }
+  ]
+}
